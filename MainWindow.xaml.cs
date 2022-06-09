@@ -37,6 +37,14 @@ namespace Proyect1_Calc
             btnPlus2.Click += BtnPlus2_Click;
             btndot.Click += Btndot_Click;
             btnSqr.Click += BtnSqr_Click;
+            btnDel.Click += BtnDel_Click;
+        }
+
+        private void BtnDel_Click(object sender, RoutedEventArgs e)
+        {
+            string deletedNum = results.Text.ToString().Length <= 1 ? "0" : results.Text.ToString().Remove(results.Text.ToString().Length - 1);
+            results.Text = deletedNum.ToString();
+            
         }
 
         private void BtnNeg_Click1(object sender, RoutedEventArgs e)
